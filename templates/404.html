@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{Title}} - {{Tr(Lang, "name")}}{% endblock %}
+{% block body %}
+{% include Page.NavbarTplPath %}
+<section class="bg-image text-center py-8 px-4 px-md-0 " style="background-color: rgb(37, 37, 37) !important; height: 94vh;">
+    <img class="background" src="https://static.quavergame.com/img/bg.jpg" alt="">
+    <div class="container position-relative index-2 " style="top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);">
+        <h1 class="display-0 font-weight-black text-white mb-0">404</h1>
+        <p class="text-light mb-4">The page you are looking for could not be found!</p>
+        <a class="btn btn-primary btn-rounded btn-lg" href="https://wiki.quavergame.com/">Back</a>
+        <a class="btn btn-outline-light btn-rounded btn-lg ml-2" href="mailto:support@quavergame.com">Get in touch</a>
+    </div>
+</section>
+{% include Page.FooterTplPath %}
+{% endblock %}

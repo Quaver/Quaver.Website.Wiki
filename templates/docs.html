@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}{{Title}} - {{Tr(Lang, "name")}}{% endblock %}
+{% block body %}
+
+{% include Page.NavbarTplPath %}
+
+<section class="bg-image bg-dark py-5 py-lg-7 px-4 px-lg-0" style="background-color: rgb(52, 53, 56) !important;">
+    <img class="background" src="/img/cover.jpg" alt="">
+    <div class="container">
+        <div class="row align-items-center text-center">
+            <div class="col-md-8 mx-auto">
+                <h1 class="display-5 text-white font-weight-bold">
+                    {{Title}}
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="widget">
+                    <div class="widget-body">
+                        {% if Toc %}
+                        <div class="list-group list-group-flush">
+                            {% for node in Toc.Nodes %}
+                            {% if node.Plain %}
+                            {{node.Title}}
+                            {% else %}
+                            <a class="list-group-item list-group-item-action" href="{{Page.DocsBaseURL}}/{{node.Name}}">
+                                <strong>{{node.Title}}</strong>
+                            </a>
+                            {% for file in node.Nodes %}
+                            {% if file.Title %}
+                            <a class="list-group-item list-group-item-action pl-4" href="{{Page.DocsBaseURL}}/{{node.Name}}/{{file.Name}}">
+                                {{file.Title}}
+                            </a>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        n/a
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-body markdown">
+                        {{Content|safe}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include Page.FooterTplPath %}
+
+{% endblock %}
