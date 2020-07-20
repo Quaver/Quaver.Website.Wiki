@@ -3,4 +3,4 @@
 🌎 The front-end website for Quaver Wiki.
 
 # License
-This project is licensed under the [AGPL-3.0](https://github.com/Swan/Quaver.Website/blob/master/LICENSE) license.
+This project is licensed under the AGPL-3.0 license.
