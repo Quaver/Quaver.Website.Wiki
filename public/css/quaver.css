@@ -320,3 +320,10 @@ code {
 .markdown {
     line-height: 1.8;
 }
+
+.markdown pre {
+    background: #1a1a1a;
+    color: #ffe76b;
+    padding: 4px;
+    overflow: hidden;
+}
