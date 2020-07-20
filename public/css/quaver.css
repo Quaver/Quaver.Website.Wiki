@@ -288,7 +288,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .markdown hr {
-    height: 1px !important;
+    height: 2px !important;
+    background: #5b5b5b;
 }
 
 .markdown h1 {
@@ -302,3 +303,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /*.markdown h2, h3, h4, h5 {*/
 /*    margin-left: 10px;*/
 /*}*/
+
+.markdown table th,
+.markdown table td {
+    border-color: #5b5b5b;
+}
+
+code {
+    color: #ffe76b;
+}
+
+.markdown :not(pre) > code {
+    background: #1a1a1a;
+}
+
+.markdown {
+    line-height: 1.8;
+}
