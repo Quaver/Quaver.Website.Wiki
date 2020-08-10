@@ -324,6 +324,10 @@ code {
 .markdown pre {
     background: #1a1a1a;
     color: #ffe76b;
-    padding: 4px;
+    padding: 8px 12px;
     overflow: hidden;
+}
+
+.markdown pre code {
+    padding: 0 !important;
 }
