@@ -31,10 +31,9 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(window).on('load', function(){
         let hash = location.hash;
-
         if (hash !== '') {
-            $('html, body').animate({ scrollTop: $(hash).offset().top - 10}, 0);
-
+            hash = hash.replace("#", "");
+            $('html, body').animate({ scrollTop: $("[id='" + hash + "']").offset().top - 10}, 0);
         }
     });
 });
