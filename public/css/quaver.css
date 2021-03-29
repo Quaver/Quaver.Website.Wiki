@@ -331,3 +331,16 @@ code {
 .markdown pre code {
     padding: 0 !important;
 }
+
+.list-group-item {
+	color: #ffe76b;
+}
+
+.list-group-item-sub {
+	color: #fff;
+}
+
+.list-group-item.active {
+	color: #45D6F5;
+    background-color: #242424;
+}

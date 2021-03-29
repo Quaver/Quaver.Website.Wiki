@@ -29,12 +29,12 @@
                             {% if node.Plain %}
                             {{node.Title}}
                             {% else %}
-                            <a class="list-group-item list-group-item-action" href="{{Page.DocsBaseURL}}/{{node.Name}}">
+                            <a class="list-group-item list-group-item-action {% if Page.DocsBaseURL|add:"/"|add:node.Name == Link|lower %}active{% endif %}" href="{{Page.DocsBaseURL}}/{{node.Name}}">
                                 <strong>{{node.Title}}</strong>
                             </a>
                             {% for file in node.Nodes %}
                             {% if file.Title %}
-                            <a class="list-group-item list-group-item-action pl-4" href="{{Page.DocsBaseURL}}/{{node.Name}}/{{file.Name}}">
+                            <a class="list-group-item list-group-item-action list-group-item-sub pl-4 {% if Page.DocsBaseURL|add:"/"|add:node.Name|add:"/"|add:file.Name == Link|lower %}active{% endif %}" href="{{Page.DocsBaseURL}}/{{node.Name}}/{{file.Name}}">
                                 {{file.Title}}
                             </a>
                             {% endif %}
