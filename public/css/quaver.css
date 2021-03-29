@@ -334,10 +334,12 @@ code {
 
 .list-group-item {
 	color: #ffe76b;
+    padding: 8px 16px 5px;
 }
 
 .list-group-item-sub {
 	color: #fff;
+    padding: 5px 16px;
 }
 
 .list-group-item.active {
