@@ -2,3 +2,4 @@
 /data/docs/
 .idea
 /custom/app.ini
+.DS_Store
