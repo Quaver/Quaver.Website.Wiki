@@ -288,8 +288,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .markdown hr {
-    height: 2px !important;
-    background: #5b5b5b;
+    display: none;
 }
 
 .markdown h1 {
@@ -390,10 +389,8 @@ code {
 }
 
 .skin-table .skin-table-note-toggle {
-    align-items: center;
     color: #45D6F5;
     cursor: pointer;
-    display: flex;
     outline: none;
     position: relative;
     padding-right: 52px;
@@ -401,10 +398,13 @@ code {
 
 .skin-table .skin-table-note-toggle::after {
     content: "[i]";
+    align-items: center;
     color: #ffe76b;
+    display: inline-flex;
     font-size: 12px;
     font-weight: bold;
     margin-left: 10px;
+    vertical-align: middle;
     white-space: nowrap;
 }
 
