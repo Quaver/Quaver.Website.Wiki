@@ -350,7 +350,6 @@ code {
 .skin-table {
     border-collapse: separate;
     border-spacing: 0;
-    width: 100%;
     color: white;
     font-weight: bold;
 }
@@ -358,7 +357,7 @@ code {
 .skin-table tbody::before {
     content: "";
     display: block;
-    height: 10px;
+    height: 6px;
 }
 
 .skin-table th {
@@ -368,7 +367,7 @@ code {
 }
 
 .skin-table td {
-    background: #252525;
+    background: #292929;
     text-align: left;
     padding: 12px;
 }
@@ -385,9 +384,9 @@ code {
     color: #cacaca;
     text-align: left;
     padding: 12px;
-    background: #252525; 
-    border-top: 1px solid #4b4b4b;
-    border-bottom: 1px solid #4b4b4b00;
+    background: #292929; 
+    border-top: 1px solid #404040;
+    border-bottom: 1px solid transparent;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     font-weight: normal;
