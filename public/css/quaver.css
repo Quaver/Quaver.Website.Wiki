@@ -370,6 +370,10 @@ code {
     background: #313131;
 }
 
+.skin-table tr.has-note td {
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
 .skin-table td {
     background: #292929;
     text-align: left;
@@ -383,6 +387,51 @@ code {
 
 .skin-table tbody tr:first-child td:last-child {
     border-top-right-radius: 10px;
+}
+
+.skin-table .skin-table-note-toggle {
+    align-items: center;
+    color: #45D6F5;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    position: relative;
+    padding-right: 52px;
+}
+
+.skin-table .skin-table-note-toggle::after {
+    content: "[i]";
+    color: #ffe76b;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.skin-table .skin-table-note-toggle:hover,
+.skin-table .skin-table-note-toggle:focus {
+    background: #333333;
+    color: #ffe76b;
+}
+
+.skin-table tr.note-expanded td {
+    background: #303030;
+}
+
+.skin-table tr.has-note:not(.note-expanded) td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.skin-table tr.has-note:not(.note-expanded) td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.skin-table tr.note-expanded .skin-table-note-toggle::after {
+    content: "[-]";
+}
+
+.skin-table .skin-table-note-hidden {
+    display: none;
 }
 
 .skin-table .note {
