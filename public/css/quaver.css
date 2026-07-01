@@ -363,13 +363,14 @@ code {
 .skin-table th {
     text-align: left;
     background: transparent;
-    border-bottom: transparent;
+	border: none !important;
 }
 
 .skin-table td {
     background: #292929;
     text-align: left;
     padding: 12px;
+	border-color: transparent !important;
 }
 
 .skin-table tbody tr:first-child td:first-child {
