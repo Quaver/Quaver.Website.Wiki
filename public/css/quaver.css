@@ -366,6 +366,10 @@ code {
 	border: none !important;
 }
 
+.skin-table tbody tr:first-child td {
+    background: #313131;
+}
+
 .skin-table td {
     background: #292929;
     text-align: left;
