@@ -350,7 +350,7 @@ code {
     border-collapse: separate;
     border-spacing: 0;
     color: white;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .skin-table tbody::before {
@@ -360,9 +360,22 @@ code {
 }
 
 .skin-table th {
+    text-align: center;
+    background: #404040;
+    padding: 12px;
+    font-weight: bold;
+    border: none !important;
+}
+
+.skin-table th:first-child {
     text-align: left;
-    background: transparent;
-	border: none !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.skin-table th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .skin-table tbody tr:first-child td {
@@ -375,13 +388,15 @@ code {
 
 .skin-table td {
     background: #292929;
-    text-align: left;
+    text-align: center;
     padding: 12px;
-	border-color: transparent !important;
+    border-color: transparent !important;
 }
 
 .skin-table tbody tr:first-child td:first-child {
     border-top-left-radius: 10px;
+    text-align: left;
+    font-weight: bold;
 }
 
 .skin-table tbody tr:first-child td:last-child {
